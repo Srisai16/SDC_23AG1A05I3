@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Tracker</title>
+</head>
+<body>
+    <h1>Welcome to the Transaction Tracker</h1>
+    
+    <p>Your preferred language is: {{ user_language }}</p>
+    
+    <h2>Set Language Preference</h2>
+    <p><a href="/set_language/en">Set language to English</a></p>
+    <p><a href="/set_language/es">Set language to Spanish</a></p>
+    <p><a href="/set_language/fr">Set language to French</a></p>
+    
+    <h2>Transaction History</h2>
+    <p><a href="/cookie_history">View Cookie-based History</a></p>
+    <p><a href="/session_history">View Session-based History</a></p>
+    
+    <p><a href="/clear_history">Clear All History</a></p>
+    
+    <h3>Recent Cookie Transactions ({{ cookie_history|length }})</h3>
+    <ul>
+        {% for item in cookie_history[-3:] %}
+        <li>{{ item.type }}: {{ item.value }} at {{ item.timestamp }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h3>Recent Session Transactions ({{ session_history|length }})</h3>
+    <ul>
+        {% for item in session_history[-3:] %}
+        <li>{{ item.type }}: {{ item.value }} at {{ item.timestamp }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

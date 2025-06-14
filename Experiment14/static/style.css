@@ -1,0 +1,25 @@
+body {
+font-family: 'Segoe UI', sans-serif;
+background: #f8f9fa;
+margin: 0;
+padding: 0;
+}
+nav {
+background: #343a40;
+padding: 10px;
+text-align: center;
+}
+nav a {
+color: white;
+margin: 0 15px;
+text-decoration: none;
+}
+.container {
+padding: 20px;
+}
+form input, form button {
+display: block;
+margin: 10px 0;
+padding: 8px;
+width: 300px;
+}

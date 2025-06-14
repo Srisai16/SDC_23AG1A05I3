@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Weather in {{ current.city }}</h1>
+    <p><strong>Temperature:</strong> {{ current.temperature }} °C</p>
+    <p><strong>Description:</strong> {{ current.description }}</p>
+    <img src="http://openweathermap.org/img/wn/{{ current.icon }}@2x.png" alt="weather icon">
+
+    <h2>Past 5 Days Temperature</h2>
+    <canvas id="weatherChart" width="600" height="400"></canvas>
+
+    <script>
+        const labels = [
+            {% for day in historical %}
+                "{{ day.date }}"{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        ];
+
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Temperature (°C)',
+                data: [
+                    {% for day in historical %}
+                        {{ day.temp }}{% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                ],
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                tension: 0.4
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        };
+
+        new Chart(document.getElementById('weatherChart'), config);
+    </script>
+</body>
+</html>

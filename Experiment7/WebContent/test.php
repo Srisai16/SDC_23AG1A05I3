@@ -1,0 +1,1 @@
+<?php require 'includes/config.php'; echo "Connected successfully!"; ?>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to your FBS eBooks account">
+    <link rel="stylesheet" href="./style.css">
+    <title>Login - FBS eBooks Store</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-grid">
+                <div class="logo-container">
+                    <img src="images\fbslogo.jpg" alt="FBS Logo">
+                    <h1>FBS - World's Best Online eBooks Store</h1>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="login.html" class="active">Login</a>
+                <a href="registration.html">Register</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="form-container">
+                <h2 class="form-title">Login to Your Account</h2>
+                <form name="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                    
+                    <p class="text-center" style="margin-top: 1rem;">Don't have an account? <a href="registration.html">Register here</a></p>
+                    <p class="text-center"><a href="#">Forgot password?</a></p>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 FBS eBooks. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

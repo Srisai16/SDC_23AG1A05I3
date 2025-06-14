@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create an account with FBS eBooks">
+    <link rel="stylesheet" href="./style.css">
+    <title>Register - FBS eBooks Store</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-grid">
+                <div class="logo-container">
+                    <img src="fbs.png" alt="FBS Logo">
+                    <h1>FBS - World's Best Online eBooks Store</h1>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="login.html">Login</a>
+                <a href="registration.html" class="active">Register</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="form-container">
+                <h2 class="form-title">Create Your Account</h2>
+                <form name="registrationForm" class="registration-form">
+                    <div class="form-group">
+                        <label for="username">Username <span class="required-field">*</span></label>
+                        <input type="text" id="username" name="username" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password <span class="required-field">*</span></label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email <span class="required-field">*</span></label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required-field">*</span></label>
+                        <input type="tel" id="phone" name="phone" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Gender <span class="required-field">*</span></label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="male" required> Male</label>
+                            <label><input type="radio" name="gender" value="female"> Female</label>
+                            <label><input type="radio" name="gender" value="other"> Other</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Languages Known <span class="required-field">*</span></label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="languages" value="english"> English</label>
+                            <label><input type="checkbox" name="languages" value="hindi"> Hindi</label>
+                            <label><input type="checkbox" name="languages" value="telugu"> Telugu</label>
+                            <label><input type="checkbox" name="languages" value="tamil"> Tamil</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Address <span class="required-field">*</span></label>
+                        <textarea id="address" name="address" class="form-control" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                    
+                    <p class="text-center" style="margin-top: 1rem;">Already have an account? <a href="login.html">Login here</a></p>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 FBS eBooks. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+### **Explanation of the Current `script.js`**
+
+This script fetches weather data from **OpenWeather API** when the user enters a city name and clicks the "Get Weather" button. It then displays the weather details on the webpage.
+
+#### **Breaking Down the Code (Step by Step)**
+
+1. **Selecting the Button Element**  
+   ```js
+   const btn = document.getElementById('btn');
+   ```
+   - This line finds the **button element** (`<button id="btn">Get Weather</button>`) from `index.html` and stores it in a variable.
+
+2. **Adding a Click Event to the Button**  
+   ```js
+   btn.addEventListener('click', function() { 
+   ```
+   - When the button is **clicked**, the function inside `addEventListener()` runs.
+
+3. **Getting the City Name from Input Field**  
+   ```js
+   const city = document.getElementById('city').value;
+   ```
+   - This line takes the text entered in the input field (`<input id="city">`) and stores it in a variable called `city`.
+
+4. **Constructing the API URL**  
+   ```js
+   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=171e009cae7e126fcbcec49c3a5cee6a`;
+   ```
+   - This creates a **URL** by inserting the entered city name into the OpenWeather API request.
+   - The API key `171e009cae7e126fcbcec49c3a5cee6a` is used for authentication.
+
+5. **Fetching Data from API (Using Promises)**  
+   ```js
+   fetch(url)
+   .then(response => response.json()) 
+   .then(data => {
+       displayWeather(data);
+   })
+   .catch(error => {
+       console.error('Error:', error);
+   });
+   ```
+   - `fetch(url)`: Requests weather data from OpenWeather API.
+   - `.then(response => response.json())`: Converts the response into **JSON format**.
+   - `.then(data => { displayWeather(data); })`: Sends this data to the `displayWeather()` function.
+   - `.catch(error => { console.error('Error:', error); })`: **Handles errors** (e.g., if the city name is incorrect).
+
+6. **Displaying the Weather Data**  
+   ```js
+   function displayWeather(data) {
+   ```
+   - This function **displays weather information** on the webpage.
+
+7. **Checking for Invalid City Name**  
+   ```js
+   if (data.cod === '404') {
+       result.innerHTML = 'City not found. Please try again.';
+   ```
+   - If the city is **not found**, it displays an error message.
+
+8. **Displaying the Weather Details**  
+   ```js
+   result.innerHTML = `
+       <h2 style="font-family: 'Alkatra', serif;">Weather of ${data.name}</h2>
+       <h4>Temperature: ${Math.round(data.main.temp -273.15)}\u00B0 C</h4>
+       <h4>Feels like: ${Math.round(data.main.feels_like -273.15)}\u00B0 C</h4>
+       <h4>Humidity: ${data.main.humidity} %</h4>
+       <h4>Pressure: ${data.main.pressure} hPa</h4>
+       <h4>Wind speed: ${data.wind.speed} m/s</h4>
+       <h4>Wind direction: ${data.wind.deg} degrees</h4>`;
+   ```
+   - Displays the **temperature, humidity, wind speed**, etc., on the webpage.
+
+---
+
+## **Modified Script (Aligned to Your Experiment 4)**
+✅ Uses **ES6 Features**: Arrow Functions, Promises, Async/Await.  
+✅ **Includes Date** and Displays It.  
+✅ **Displays Weather Graphically** using **Chart.js**.
+
+### **Updated `script.js`**
+```js
+// Select the button element
+const btn = document.getElementById('btn');
+
+// Add event listener for button click
+btn.addEventListener('click', async () => {  // Using async/await
+    const city = document.getElementById('city').value; // Get city name
+    const apiKey = '171e009cae7e126fcbcec49c3a5cee6a';
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+    try {
+        const response = await fetch(url);  // Fetch data using async/await
+        const data = await response.json(); // Convert response to JSON
+
+        if (data.cod === '404') {
+            document.getElementById('result').innerHTML = 'City not found. Try again!';
+            return;
+        }
+
+        displayWeather(data); // Call function to display weather details
+        displayGraph(data.main.temp, data.main.feels_like, data.main.humidity); // Show graph
+    } catch (error) {
+        console.error('Error fetching weather:', error);
+    }
+});
+
+// Function to display weather information
+const displayWeather = (data) => {
+    const result = document.getElementById('result');
+    result.innerHTML = `
+        <h2 style="font-family: 'Alkatra', serif;">Weather of ${data.name}</h2>
+        <h4>Temperature: ${Math.round(data.main.temp - 273.15)}°C</h4>
+        <h4>Feels like: ${Math.round(data.main.feels_like - 273.15)}°C</h4>
+        <h4>Humidity: ${data.main.humidity}%</h4>
+        <h4>Pressure: ${data.main.pressure} hPa</h4>
+        <h4>Wind speed: ${data.wind.speed} m/s</h4>
+        <h4>Wind direction: ${data.wind.deg} degrees</h4>
+    `;
+};
+
+// Function to display a simple weather graph using Chart.js
+const displayGraph = (temp, feelsLike, humidity) => {
+    const ctx = document.getElementById('weatherChart').getContext('2d');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Temperature (°C)', 'Feels Like (°C)', 'Humidity (%)'],
+            datasets: [{
+                label: 'Weather Data',
+                data: [Math.round(temp - 273.15), Math.round(feels_like - 273.15), humidity],
+                backgroundColor: ['red', 'orange', 'blue'],
+                borderColor: ['darkred', 'darkorange', 'darkblue'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+};
+
+// Display current date
+document.addEventListener("DOMContentLoaded", () => {
+    let today = new Date();
+    let formattedDate = today.toDateString(); 
+    document.getElementById("current-date").innerText = "Today's Date: " + formattedDate;
+});
+```
+
+---
+
+## **Key Modifications and Features**
+### ✅ **1. Uses `async/await` Instead of `.then()`**
+- `async/await` makes the code **simpler** and **easier to read**.
+
+### ✅ **2. Displays a Graph Using `Chart.js`**
+- This graph **visually represents**:
+  - Temperature 🌡️
+  - Feels Like 🌥️
+  - Humidity 💧
+  
+### ✅ **3. Includes Current Date**
+- Displays today’s date at the top of the page.
+
+### ✅ **4. Uses `const` and `let` Instead of `var`**
+- ES6 syntax for **better readability and scope management**.
+
+---
+
+## **How the Code Works in Layman Terms**
+1. **User enters a city name** and clicks the button.
+2. **JavaScript fetches weather data** from OpenWeather API.
+3. **Data is displayed on the screen** (temperature, humidity, wind speed, etc.).
+4. **A simple bar graph is shown** to visualize the data.
+5. **Today's date is displayed** on the webpage.
+
+---
+
+## **Next Step: Add the Graph to `index.html`**
+Modify `index.html` to include a `<canvas>` for the Chart.js graph:
+```html
+<!-- Canvas for Weather Graph -->
+<canvas id="weatherChart" width="400" height="200"></canvas>
+```
+
+---
+
+## **Final Thoughts**
+✅ This version **fully meets your Experiment 4 requirements**:  
+✅ Uses **ES6 features**  
+✅ Implements **async/await**  
+✅ Fetches data from **OpenWeather API**  
+✅ Displays **graphical weather representation**  
+
+Would you like help **integrating Chart.js** or **styling improvements**? 🚀

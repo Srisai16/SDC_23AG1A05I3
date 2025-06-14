@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your FBS eBooks account">
+    <link rel="stylesheet" href="./style.css">
+    <title>Register - FBS eBooks Store</title>
+    <style>
+        /* Additional styles specific to registration page */
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 8px;
+        }
+        
+        .checkbox-option, .radio-option {
+            display: flex;
+            align-items: center;
+        }
+        
+        .checkbox-option input, .radio-option input {
+            margin-right: 8px;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.875rem;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        textarea.form-control {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .required-field::after {
+            content: " *";
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-grid">
+                <div class="logo-container">
+                    <img src="images/fbslogo.jpg" alt="FBS Logo">
+                    <h1>FBS - World's Best Online eBooks Store</h1>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="login.html">Login</a>
+                <a href="registration.html" class="active">Register</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="form-container">
+                <h2 class="form-title">Create Your Account</h2>
+                <form name="registrationForm" id="registrationForm" class="login-form">
+                    <div class="form-group">
+                        <label for="username" class="required-field">Username</label>
+                        <input type="text" id="username" name="username" class="form-control" required>
+                        <div id="usernameError" class="error-message"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="required-field">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                        <div id="passwordError" class="error-message"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="required-field">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                        <div id="emailError" class="error-message"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="required-field">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" required>
+                        <div id="phoneError" class="error-message"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="required-field">Gender</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="other" name="gender" value="other">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                        <div id="genderError" class="error-message"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="required-field">Preferred Reading Languages</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="english" name="languages" value="english">
+                                <label for="english">English</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="telugu" name="languages" value="telugu">
+                                <label for="telugu">Telugu</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="hindi" name="languages" value="hindi">
+                                <label for="hindi">Hindi</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="tamil" name="languages" value="tamil">
+                                <label for="tamil">Tamil</label>
+                            </div>
+                        </div>
+                        <div id="languagesError" class="error-message"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address" class="required-field">Address</label>
+                        <textarea id="address" name="address" class="form-control" required></textarea>
+                        <div id="addressError" class="error-message"></div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                    
+                    <p class="text-center" style="margin-top: 1rem;">Already have an account? <a href="login.html">Login here</a></p>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 FBS eBooks. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registrationForm');
+            
+            // Add event listeners for real-time validation
+            document.getElementById('username').addEventListener('blur', validateUsername);
+            document.getElementById('password').addEventListener('blur', validatePassword);
+            document.getElementById('email').addEventListener('blur', validateEmail);
+            document.getElementById('phone').addEventListener('blur', validatePhone);
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validate all fields
+                const isUsernameValid = validateUsername();
+                const isPasswordValid = validatePassword();
+                const isEmailValid = validateEmail();
+                const isPhoneValid = validatePhone();
+                const isGenderValid = validateGender();
+                const isLanguagesValid = validateLanguages();
+                const isAddressValid = validateAddress();
+                
+                if (isUsernameValid && isPasswordValid && isEmailValid && 
+                    isPhoneValid && isGenderValid && isLanguagesValid && isAddressValid) {
+                    // Form is valid, proceed with submission
+                    alert('Registration successful! Welcome to FBS eBooks.');
+                    // In a real application, you would submit the form here
+                    // form.submit();
+                }
+            });
+            
+            function validateUsername() {
+                const username = document.getElementById('username').value.trim();
+                const errorElement = document.getElementById('usernameError');
+                
+                if (!username) {
+                    showError(errorElement, 'Please enter a username');
+                    return false;
+                } else if (username.length < 6) {
+                    showError(errorElement, 'Username must be at least 6 characters');
+                    return false;
+                } else if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+                    showError(errorElement, 'Only letters, numbers and underscores allowed');
+                    return false;
+                } else {
+                    hideError(errorElement);
+                    return true;
+                }
+            }
+            
+            function validatePassword() {
+                const password = document.getElementById('password').value;
+                const errorElement = document.getElementById('passwordError');
+                
+                if (!password) {
+                    showError(errorElement, 'Please enter a password');
+                    return false;
+                } else if (password.length < 8) {
+                    showError(errorElement, 'Password must be at least 8 characters');
+                    return false;
+                } else if (!/[A-Z]/.test(password) || !/[a-z]/.test(password) || !/[0-9]/.test(password)) {
+                    showError(errorElement, 'Include uppercase, lowercase and numbers');
+                    return false;
+                } else {
+                    hideError(errorElement);
+                    return true;
+                }
+            }
+            
+            function validateEmail() {
+                const email = document.getElementById('email').value.trim();
+                const errorElement = document.getElementById('emailError');
+                
+                if (!email) {
+                    showError(errorElement, 'Please enter an email address');
+                    return false;
+                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    showError(errorElement, 'Please enter a valid email address');
+                    return false;
+                } else {
+                    hideError(errorElement);
+                    return true;
+                }
+            }
+            
+            function validatePhone() {
+                const phone = document.getElementById('phone').value.trim();
+                const errorElement = document.getElementById('phoneError');
+                
+                if (!phone) {
+                    showError(errorElement, 'Please enter a phone number');
+                    return false;
+                } else if (!/^\d{10}$/.test(phone)) {
+                    showError(errorElement, 'Phone number must be 10 digits');
+                    return false;
+                } else {
+                    hideError(errorElement);
+                    return true;
+                }
+            }
+            
+            function validateGender() {
+                const genderSelected = document.querySelector('input[name="gender"]:checked');
+                const errorElement = document.getElementById('genderError');
+                
+                if (!genderSelected) {
+                    showError(errorElement, 'Please select your gender');
+                    return false;
+                } else {
+                    hideError(errorElement);
+                    return true;
+                }
+            }
+            
+            function validateLanguages() {
+                const languagesSelected = document.querySelectorAll('input[name="languages"]:checked');
+                const errorElement = document.getElementById('languagesError');
+                
+                if (languagesSelected.length === 0) {
+                    showError(errorElement, 'Please select at least one language');
+                    return false;
+                } else {
+                    hideError(errorElement);
+                    return true;
+                }
+            }
+            
+            function validateAddress() {
+                const address = document.getElementById('address').value.trim();
+                const errorElement = document.getElementById('addressError');
+                
+                if (!address) {
+                    showError(errorElement, 'Please enter your address');
+                    return false;
+                } else if (address.length < 10) {
+                    showError(errorElement, 'Address is too short');
+                    return false;
+                } else {
+                    hideError(errorElement);
+                    return true;
+                }
+            }
+            
+            function showError(element, message) {
+                element.textContent = message;
+                element.style.display = 'block';
+            }
+            
+            function hideError(element) {
+                element.textContent = '';
+                element.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
