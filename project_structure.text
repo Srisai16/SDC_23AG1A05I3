@@ -1,44 +1,274 @@
 - .hintrc
-- amazon-clone
-  - account.html
-  - cart.html
-  - checkout.html
-  - css
-    - main.css
-    - responsive.css
-  - images
-    - banners
-      - banner.jpg
-    - logo.png
-    - products
-      - product1.jpg
-      - product2.jpg
-  - index.html
-  - js
-    - auth.js
-    - cart.js
-    - main.js
-  - login.html
-  - products.html
-  - register.html
-- application
-  - app.js
-  - index.html
-  - style.css
-- Experiment1
+- Experiment01
+  - assets
+    - images
+      - cart.png
+      - catalog.png
+      - login.png
   - cart.html
   - index.html
   - login.html
   - README.md
   - registration.html
   - style.css
+- Experiment02
+  - add_to_cart.php
+  - ajax
+    - add_to_cart.php
+    - apply_coupon.php
+  - cart.html
+  - cart.php
+  - Home-FBS-eBooks-Store.png
+  - images
+    - c++DSA.jpg
+    - cart.png
+    - catalog.png
+    - ebooks.jpg
+    - fbslogo.jpg
+    - JSessentials.jpg
+    - login.png
+    - masteringjava.jpg
+    - pybeg.jpg
+    - register.png
+  - includes
+    - config.php
+    - db.php
+    - footer.php
+    - header.php
+  - index.html
+  - index.php
+  - login.html
+  - login.php
+  - logout.php
+  - product-detail.php
+  - products.php
+  - README.md
+  - register.php
+  - registration.html
+  - style.css
+  - test.php
+- Experiment03
+  - add_to_cart.php
+  - ajax
+    - add_to_cart.php
+    - apply_coupon.php
+  - Cart-FBS-eBooks-Store.png
+  - cart.html
+  - cart.php
+  - images
+    - c++DSA.jpg
+    - ebooks.jpg
+    - fbslogo.jpg
+    - JSessentials.jpg
+    - masteringjava.jpg
+    - pybeg.jpg
+    - register.png
+  - includes
+    - config.php
+    - db.php
+    - footer.php
+    - header.php
+  - index.html
+  - index.php
+  - js
+    - cart.js
+    - main.js
+  - login.html
+  - login.php
+  - logout.php
+  - product-detail.php
+  - products.php
+  - README.md
+  - register.php
+  - registration.html
+  - style.css
+  - test.php
+- Experiment04
+  - .env
+  - .gitignore
+  - DeleteData.java
+  - DisplayData.java
+  - index.html
+  - package-lock.json
+  - package.json
+  - README.md
+  - server.js
+  - Weather-app-main
+    - cloudy.png
+    - index.html
+    - ReadMeAboutindexhtml.md
+    - ReadMeAboutOldNewScriptjs
+    - ReadMeAboutStyleCss.md
+    - script.js
+    - style.css
+    - Weather-app.png
+- Experiment05
+  - bin
+    - CRUDApp.class
+  - CRUDApp.class
+  - CRUDApp.java
+  - CRUDAPP.png
+  - mysql-connector-j-9.3.0.jar
+  - mysql_database.png
+  - README.md
+- Experiment06
+  - bookstore.dtd
+  - bookstore.xsd
+  - bookstore_dtd.xml
+  - bookstore_xsd.xml
+  - output.png
+  - README.md
+  - XMLValidator.class
+  - XMLValidator.java
+- Experiment07
+  - .metadata
+    - .lock
+    - .log
+    - .mylyn
+      - .taskListIndex
+        - segments_1
+        - write.lock
+      - .tasks.xml.zip
+      - contexts
+      - repositories.xml.zip
+      - tasks.xml.zip
+    - .plugins
+      - org.eclipse.core.resources
+        - .projects
+          - .org.eclipse.egit.core.cmp
+            - .location
+            - .markers.snap
+            - .syncinfo.snap
+        - .root
+          - .indexes
+            - properties.index
+          - .markers.snap
+        - .safetable
+          - org.eclipse.core.resources
+        - 0.snap
+      - org.eclipse.core.runtime
+        - .settings
+          - org.eclipse.core.resources.prefs
+          - org.eclipse.jdt.ui.prefs
+          - org.eclipse.jsch.core.prefs
+          - org.eclipse.mylyn.context.core.prefs
+          - org.eclipse.mylyn.monitor.ui.prefs
+          - org.eclipse.mylyn.tasks.ui.prefs
+          - org.eclipse.php.core.prefs
+          - org.eclipse.ui.prefs
+          - org.eclipse.urischeme.prefs
+      - org.eclipse.debug.core
+      - org.eclipse.debug.ui
+      - org.eclipse.dltk.core
+      - org.eclipse.dltk.ui
+      - org.eclipse.e4.workbench
+        - workbench.xmi
+      - org.eclipse.egit.core
+        - .org.eclipse.egit.core.cmp
+          - .project
+          - .settings
+            - org.eclipse.core.resources.prefs
+      - org.eclipse.equinox.p2.ui
+      - org.eclipse.jdt.core
+        - variablesAndContainers.dat
+      - org.eclipse.jdt.ui
+      - org.eclipse.m2e.core
+        - workspaceState.ser
+      - org.eclipse.m2e.logback
+        - 0.log
+        - logback.2.6.1.20240411-1122.xml
+      - org.eclipse.mylyn.context.core
+        - contexts
+      - org.eclipse.mylyn.github.ui
+      - org.eclipse.mylyn.tasks.ui
+      - org.eclipse.pde.core
+        - .cache
+        - .p2
+          - org.eclipse.equinox.p2.engine
+            - profileRegistry
+      - org.eclipse.php.core
+      - org.eclipse.tips.ide
+      - org.eclipse.tm.terminal.view.ui
+      - org.eclipse.ui.intro
+        - introstate
+      - org.eclipse.ui.workbench
+        - workingsets.xml
+      - org.eclipse.userstorage.oauth
+    - version.ini
+  - DBUtil.class
+  - DBUtil.java
+  - jakarta.servlet-api-5.0.0-javadoc.jar
+  - javax.servlet-api-3.0.1.jar
+  - mysql-connector-j-9.3.0.jar
+  - ShoppingCartController.class
+  - ShoppingCartController.java
+  - WebContent
+    - add_to_cart.php
+    - ajax
+      - add_to_cart.php
+      - apply_coupon.php
+    - Cart-FBS-eBooks-Store.png
+    - cart.html
+    - cart.php
+    - images
+      - c++DSA.jpg
+      - ebooks.jpg
+      - fbslogo.jpg
+      - JSessentials.jpg
+      - masteringjava.jpg
+      - pybeg.jpg
+    - includes
+      - config.php
+      - db.php
+      - footer.php
+      - header.php
+    - index.html
+    - index.php
+    - js
+      - cart.js
+      - main.js
+    - login.html
+    - login.php
+    - logout.php
+    - product-detail.php
+    - products.php
+    - README.md
+    - register.php
+    - registration.html
+    - style.css
+    - test.php
+    - WEB-INF
+      - lib
+        - mysql-connector-j-9.3.0.jar
+      - web.xml
+- Experiment08
+  - app.py
+  - Cookie-Transaction-History.png
+  - README.md
+  - Session-Transaction-History.png
+  - spanish.png
+  - templates
+    - cookie_history.html
+    - index.html
+    - session_history.html
+    - set_language.html
+  - Transaction-Tracker.png
+- Experiment09
+  - events.js
+  - localhost-3000.png
+  - os.js
+  - os.png
+  - package-lock.json
+  - package.json
+  - path.js
+  - README.md
+  - server.js
 - Experiment10
   - app.js
   - controllers
     - userController.js
   - index.js
   - JWT_SECRET.env
-  - localhost-3000.png
   - middleware
     - authMiddleware.js
   - package-lock.json
@@ -46,6 +276,8 @@
   - README.md
   - routes
     - students.js
+  - studentmanageAPI.png
+  - studentmanagement.png
 - Experiment11
   - .gitignore
   - package-lock.json
@@ -79,6 +311,7 @@
   - package.json
   - public
     - favicon.ico
+    - image.png
     - index.html
     - logo192.png
     - logo512.png
@@ -98,6 +331,7 @@
     - services
       - weatherService.js
     - setupTests.js
+    - weatherForecast.png
   - weather-app
     - .gitignore
     - package-lock.json
@@ -124,6 +358,7 @@
   - package.json
   - public
     - favicon.ico
+    - image.png
     - index.html
     - logo192.png
     - logo512.png
@@ -174,7 +409,7 @@
       - __init__.cpython-313.pyc
   - db.sqlite3
   - manage.py
-  - Readme.md
+  - README.md
   - static
     - style.css
   - student_mgmt
@@ -191,7 +426,7 @@
 - Experiment15
   - db.sqlite3
   - manage.py
-  - Readme.md
+  - README.md
   - weather
     - admin.py
     - apps.py
@@ -226,7 +461,7 @@
 - Experiment16
   - db.sqlite3
   - manage.py
-  - Readme.md
+  - README.md
   - todo
     - admin.py
     - apps.py
@@ -264,168 +499,4 @@
       - urls.cpython-313.pyc
       - wsgi.cpython-313.pyc
       - __init__.cpython-313.pyc
-- Experiment2
-  - add_to_cart.php
-  - ajax
-    - add_to_cart.php
-    - apply_coupon.php
-  - cart.html
-  - cart.php
-  - Home-FBS-eBooks-Store.png
-  - images
-    - c++DSA.jpg
-    - ebooks.jpg
-    - fbslogo.jpg
-    - JSessentials.jpg
-    - masteringjava.jpg
-    - pybeg.jpg
-    - sravani.jpg
-  - includes
-    - config.php
-    - db.php
-    - footer.php
-    - header.php
-  - index.html
-  - index.php
-  - login.html
-  - login.php
-  - logout.php
-  - product-detail.php
-  - products.php
-  - README.md
-  - register.php
-  - registration.html
-  - style.css
-  - test.php
-- Experiment3
-  - add_to_cart.php
-  - ajax
-    - add_to_cart.php
-    - apply_coupon.php
-  - Cart-FBS-eBooks-Store.png
-  - cart.html
-  - cart.php
-  - images
-    - c++DSA.jpg
-    - ebooks.jpg
-    - fbslogo.jpg
-    - JSessentials.jpg
-    - masteringjava.jpg
-    - pybeg.jpg
-  - includes
-    - config.php
-    - db.php
-    - footer.php
-    - header.php
-  - index.html
-  - index.php
-  - js
-    - cart.js
-    - main.js
-  - login.html
-  - login.php
-  - logout.php
-  - product-detail.php
-  - products.php
-  - README.md
-  - register.php
-  - registration.html
-  - style.css
-  - test.php
-- Experiment4
-  - .env
-  - DeleteData.java
-  - DisplayData.java
-  - index.html
-  - package-lock.json
-  - package.json
-  - README.md
-  - server.js
-  - Weather-app-main
-    - cloudy.png
-    - index.html
-    - ReadMeAboutindexhtml.md
-    - ReadMeAboutOldNewScriptjs
-    - ReadMeAboutStyleCss.md
-    - script.js
-    - style.css
-  - Weather-App.png
-- Experiment5
-  - CRUDApp.class
-  - CRUDApp.java
-  - mysql-connector-j-9.3.0.jar
-- Experiment6
-  - bookstore.dtd
-  - bookstore.xsd
-  - bookstore_dtd.xml
-  - bookstore_xsd.xml
-  - XMLValidator.class
-  - XMLValidator.java
-- Experiment7
-  - src
-    - DBUtil.java
-    - ShoppingCartController.java
-  - WebContent
-    - add_to_cart.php
-    - ajax
-      - add_to_cart.php
-      - apply_coupon.php
-    - cart.html
-    - cart.php
-    - images
-      - c++DSA.jpg
-      - ebooks.jpg
-      - fbslogo.jpg
-      - JSessentials.jpg
-      - masteringjava.jpg
-      - pybeg.jpg
-    - includes
-      - config.php
-      - db.php
-      - footer.php
-      - header.php
-    - index.html
-    - index.php
-    - js
-      - cart.js
-      - main.js
-    - login.html
-    - login.php
-    - logout.php
-    - product-detail.php
-    - products.php
-    - README.md
-    - register.php
-    - registration.html
-    - style.css
-    - test.php
-    - WEB-INF
-      - lib
-        - mysql-connector-j-9.3.0.jar
-      - web.xml
-- Experiment8
-  - app.py
-  - README.md
-  - templates
-    - cookie_history.html
-    - index.html
-    - session_history.html
-    - set_language.html
-  - Transaction-Tracker.png
-- Experiment9
-  - events.js
-  - localhost-3000.png
-  - os.js
-  - os.png
-  - package-lock.json
-  - package.json
-  - path.js
-  - README.md
-  - server.js
-- Lesson-1
-  - 1a.html
-  - 1b.html
-  - 1c.html
-  - 1d.html
-  - 1e.html
-  - 1f.html
+- LICENSE

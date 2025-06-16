@@ -1,274 +1,207 @@
-Here's an enhanced version of your README.md with more detailed information, better structure, and additional sections:
+
+---
 
 ```markdown
-# Student API with JWT Authentication
+# Experiment10 - 📘 Student CRUD REST API with Express & JWT
 
 ![Node.js](https://img.shields.io/badge/Node.js-v14%2B-green)
-![Express](https://img.shields.io/badge/Express-v4.17%2B-blue)
-![MongoDB](https://img.shields.io/badge/MongoDB-v4%2B-green)
+![Express](https://img.shields.io/badge/Express-v4.18%2B-blue)
 ![JWT](https://img.shields.io/badge/JWT-Authentication-orange)
+![MongoDB](https://img.shields.io/badge/MongoDB-NotUsed-lightgrey)
 
-A secure RESTful API for managing student records with JWT-based authentication, built with Node.js, Express, and MongoDB.
+A simple RESTful API built with **Express.js** that demonstrates full **CRUD operations** on student data with **JWT-based authentication** and middleware.
 
-## Table of Contents
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Installation & Setup](#installation--setup)
-- [Configuration](#configuration)
-- [API Documentation](#api-documentation)
-- [Authentication](#authentication)
-- [Environment Variables](#environment-variables)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
+---
 
-## Features
-- 🔐 JWT-based authentication
-- 📝 CRUD operations for student records
-- 🛡️ Protected routes with middleware
-- 🔄 MongoDB database integration
-- 📦 Modular code structure
-- 🌐 RESTful API design
-- 🔒 Password hashing with bcryptjs
-- ⚙️ Environment variable configuration
+## 📑 Table of Contents
 
-## Technologies Used
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
+- [🎯 Features](#-features)
+- [🧰 Technologies Used](#-technologies-used)
+- [📁 Project Structure](#-project-structure)
+- [⚙️ Installation & Setup](#️-installation--setup)
+- [🔐 Authentication](#-authentication)
+- [🧪 API Usage](#-api-usage)
+- [🧪 Sample Output](#-sample-output)
+- [📷 Screenshot](#-screenshot)
+- [📜 License](#-license)
+
+---
+
+## 🎯 Features
+
+- 🔐 JWT-based authentication system
+- 📝 Full CRUD operations on student records
+- 🛡️ Secured routes using custom middleware
+- ✅ Organized MVC-style folder structure
+- 📦 Simple and minimal setup using only core tools
+
+---
+
+## 🧰 Technologies Used
+
+- **Backend**: Node.js, Express.js
 - **Authentication**: JSON Web Tokens (JWT)
-- **Password Hashing**: bcryptjs
 - **Environment Management**: dotenv
 
-## Project Structure
-```
+---
+
+## 📁 Project Structure
+
 Experiment10/
-│
-├── controllers/           # Business logic
-│   ├── authController.js  # Handles authentication
-│   └── studentController.js # Handles student CRUD operations
-│
-├── middleware/            # Custom middleware
-│   └── authMiddleware.js  # JWT verification
-│
-├── models/                # MongoDB schemas
-│   ├── User.js           # User model
-│   └── Student.js        # Student model
-│
-├── routes/                # Route definitions
-│   ├── authRoutes.js     # Authentication routes
-│   └── studentRoutes.js  # Student CRUD routes
-│
-├── .env                  # Environment variables
-├── .gitignore            # Git ignore rules
-├── app.js                # Main application entry point
-├── package.json          # Project metadata and dependencies
-└── README.md             # Project documentation
-```
+├── app.js                          # Main entry point for the server (Express app)
+├── index.js                        # Optional alternative entry file or setup
+├── JWT_SECRET.env                  # Environment file storing JWT secret key
+├── package.json                    # Project config and dependencies
+├── package-lock.json               # Dependency lock file
+├── studentmanageAPI.png            # Screenshot of API usage
+├── studentmanagement.png           # Screenshot of UI or API results
+├── README.md                       # Project documentation
 
-## Installation & Setup
+├── controllers/
+│   └── userController.js           # Controller handling user-related logic
 
-### Prerequisites
-- Node.js (v14 or higher)
-- MongoDB (local or cloud instance)
-- npm or yarn
-- Postman or similar API testing tool
+├── middleware/
+│   └── authMiddleware.js           # Middleware to authenticate JWT tokens
 
-### Installation Steps
+├── routes/
+│   └── students.js                 # Route definitions for student API endpoints
+
+---
+
+## ⚙️ Installation & Setup
+
+### ✅ Prerequisites
+
+- Node.js v14 or later
+- Postman or any API testing tool
+
+### 🔧 Steps to Run
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/student-api-jwt.git
-   cd student-api-jwt
-   ```
+   git clone https://github.com/Srisai16/SDC_23AG1A05I3.git
+   cd SDC_23AG1A05I3/Experiment10
+````
 
 2. **Install dependencies**
+
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
-3. **Set up environment variables**
-   Create a `.env` file in the root directory with the following content:
+3. **Set environment variables**
+
+   Create a file named `.env` or `JWT_SECRET.env` and add:
+
    ```env
-   PORT=5000
-   MONGO_URI=mongodb://localhost:27017/studentdb
-   JWT_SECRET=your_very_strong_secret_here
-   JWT_EXPIRES_IN=30d
+   JWT_SECRET=your_super_secret_key
    ```
 
-4. **Start the development server**
+4. **Start the server**
+
    ```bash
-   npm start
-   # or for development with nodemon
-   npm run dev
+   node index.js
    ```
 
-5. **Seed initial data (optional)**
-   ```bash
-   npm run seed
-   ```
+---
 
-## Configuration
-The following environment variables can be configured:
+## 🔐 Authentication
 
-| Variable     | Default Value               | Description                          |
-|--------------|-----------------------------|--------------------------------------|
-| PORT         | 5000                        | Port the server listens on           |
-| MONGO_URI    | mongodb://localhost:27017/studentdb | MongoDB connection string    |
-| JWT_SECRET   | (required)                  | Secret for signing JWT tokens        |
-| JWT_EXPIRES_IN | 30d                       | Token expiration time (e.g., 30d, 1h)|
+Use this endpoint to log in and receive a token:
 
-## API Documentation
+### `POST /login`
 
-### Authentication
+**Request:**
 
-**Login to get JWT Token**
-```
-POST /api/login
-```
-Request Body:
 ```json
 {
-  "email": "admin@example.com",
-  "password": "securepassword"
-}
-```
-Successful Response:
-```json
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "user": {
-    "id": "5f8d...",
-    "email": "admin@example.com"
-  }
+  "username": "admin",
+  "password": "admin123"
 }
 ```
 
-### Student Operations
+**Response:**
 
-All student routes require JWT authentication. Include the token in the Authorization header:
-```
-Authorization: Bearer your.jwt.token.here
-```
-
-**Get All Students**
-```
-GET /api/students
-```
-Response:
-```json
-[
-  {
-    "_id": "5f8d...",
-    "name": "John Doe",
-    "age": 21,
-    "course": "Computer Science",
-    "createdAt": "2023-01-01T00:00:00.000Z"
-  }
-]
-```
-
-**Create New Student**
-```
-POST /api/students
-```
-Request Body:
 ```json
 {
-  "name": "Jane Smith",
+  "token": "eyJhbGciOiJIUzI1NiIs..."
+}
+```
+
+Use the returned token in the Authorization header to access protected routes:
+
+```
+Authorization: Bearer <your_token_here>
+```
+
+---
+
+## 🧪 API Usage
+
+All student-related endpoints require a valid JWT token.
+
+### 🔍 Get All Students
+
+```
+GET /students
+```
+
+### ➕ Create a New Student
+
+```
+POST /students
+```
+
+**Body:**
+
+```json
+{
+  "name": "John",
   "age": 22,
-  "course": "Mathematics"
+  "course": "Computer Science"
 }
 ```
 
-**Update Student**
+### 📝 Update Student
+
 ```
-PUT /api/students/:id
+PUT /students/:id
 ```
-Request Body:
+
+**Body:**
+
 ```json
 {
-  "name": "Jane Smith Updated",
   "age": 23
 }
 ```
 
-**Delete Student**
+### ❌ Delete Student
+
 ```
-DELETE /api/students/:id
+DELETE /students/:id
 ```
-
-## Testing
-To test the API endpoints:
-
-1. First, obtain a JWT token by logging in:
-   ```bash
-   curl -X POST http://localhost:5000/api/login \
-   -H "Content-Type: application/json" \
-   -d '{"email":"admin@example.com","password":"securepassword"}'
-   ```
-
-2. Use the token to access protected routes:
-   ```bash
-   curl http://localhost:5000/api/students \
-   -H "Authorization: Bearer your.jwt.token.here"
-   ```
-
-## Deployment
-To deploy this application:
-
-1. **Prepare for production**
-   - Set `NODE_ENV=production` in your `.env` file
-   - Ensure all sensitive variables are properly configured
-
-2. **Deployment options**
-   - **Heroku**: 
-     ```bash
-     heroku create
-     heroku config:set JWT_SECRET=your_production_secret
-     git push heroku main
-     ```
-   - **AWS EC2**:
-     - Set up Node.js environment
-     - Use PM2 for process management
-     - Configure MongoDB Atlas or EC2 MongoDB instance
-
-3. **Continuous Integration (optional)**
-   - Add tests to your project
-   - Set up GitHub Actions or Travis CI
-
-## Contributing
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+
+## 🧪 Sample Output
+
+```
+Server running on http://localhost:3000
+Token verified successfully
+Student data retrieved
+Student added successfully
+Student updated successfully
+Student deleted successfully
 ```
 
-Key improvements made:
-1. Added badges for visual appeal and quick tech stack identification
-2. Created a comprehensive table of contents
-3. Expanded features list with emojis for better scanning
-4. Added detailed technology stack section
-5. Improved project structure documentation
-6. Added more detailed installation steps
-7. Included configuration table for environment variables
-8. Enhanced API documentation with example requests/responses
-9. Added testing section with curl examples
-10. Included deployment instructions
-11. Added contributing guidelines
-12. Improved overall formatting and readability
-13. Added license reference
-14. Included more detailed error handling information (implied in the API docs)
+---
 
-This enhanced README provides a more complete picture of the project while maintaining the original structure and content.
+## 📷 Screenshot
+
+🖼️ Interface tested on `http://localhost:3000`:
+
+![Screenshot](./studentmanagement.png)
+![Screenshot](./studentmanageAPI.png)
+
+---
