@@ -73,19 +73,19 @@ Then open your browser and navigate to `http://localhost:5000`
 
 ### Homepage (Initial Visit)
 
-| ![Initial Homepage](Experiment08\Transaction-Tracker.png) |
+| ![Initial Homepage](Transaction-Tracker.png) |
 
 ### After Setting Language to Spanish
 
-| ![Language Set](Experiment08\spanish.png)|
+| ![Language Set](spanish.png)|
 
 ### Cookie Transaction History
 
-| ![Cookie History](Experiment08\Cookie-Transaction-History.png) |
+| ![Cookie History](Cookie-Transaction-History.png) |
 
 ### Session Transaction History
 
-| ![Session History](Experiment08\Session-Transaction-History.png) |
+| ![Session History](Session-Transaction-History.png) |
 
 ## Key Differences Demonstrated
 
