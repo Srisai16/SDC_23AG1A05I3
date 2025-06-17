@@ -42,7 +42,7 @@ Ideal for **beginners** looking to gain practical experience in Django backend d
     ├── db.sqlite3                 # SQLite database file
     │
     ├── todo\_project/              # Django project configuration
-    │   ├── **init**.py
+    │   ├── init.py
     │   ├── settings.py            # Global settings
     │   ├── urls.py                # Root URL dispatcher
     │   ├── wsgi.py
