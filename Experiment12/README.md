@@ -1,12 +1,7 @@
-
----
-
-```markdown
 # Experiment12 – 🎓 Student Management System (React App with Routing)
 
 ![React](https://img.shields.io/badge/React-v18%2B-blue)
 ![React-Router](https://img.shields.io/badge/React--Router-DOM%20v6-blue)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 A single-page **React Application** that allows users to register, log in, and navigate between different sections of the student management system including **About**, **Contact**, and **Weather Information** pages. The app demonstrates the use of **React Router**, **component-based structure**, and **API data visualization using Chart.js**.
 
@@ -14,15 +9,21 @@ A single-page **React Application** that allows users to register, log in, and n
 
 ## 📑 Table of Contents
 
-- [📌 Aim](#-aim)
-- [📋 Description](#-description)
-- [🚀 Features](#-features)
-- [🧰 Technologies Used](#-technologies-used)
-- [📁 Project Structure](#-project-structure)
-- [⚙️ Installation & Setup](#️-installation--setup)
-- [🌐 Pages Implemented](#-pages-implemented)
-- [🧪 Screenshots](#-screenshots)
-- [📝 License](#-license)
+- [Experiment12 – 🎓 Student Management System (React App with Routing)](#experiment12---student-management-system-react-app-with-routing)
+  - [📑 Table of Contents](#-table-of-contents)
+  - [📌 Aim](#-aim)
+  - [📋 Description](#-description)
+  - [🚀 Features](#-features)
+  - [🧰 Technologies Used](#-technologies-used)
+  - [📁 Project Structure](#-project-structure)
+  - [⚙️ Installation \& Setup](#️-installation--setup)
+    - [🔧 Prerequisites](#-prerequisites)
+    - [📦 Steps to Run](#-steps-to-run)
+    - [Create React App](#create-react-app)
+    - [Install Required Libraries](#install-required-libraries)
+    - [Create Folder Structure](#create-folder-structure)
+  - [🌐 Pages Implemented](#-pages-implemented)
+  - [🧪 Screenshots](#-screenshots)
 
 ---
 
@@ -35,6 +36,7 @@ To create a React-based **Student Management System** with client-side routing f
 ## 📋 Description
 
 This React application demonstrates:
+
 - How to build a modular SPA (Single Page Application)
 - Implement routing between different views using React Router
 - API integration with OpenWeatherMap
@@ -66,30 +68,33 @@ This React application demonstrates:
 
 ## 📁 Project Structure
 
-Experiment12/
-├── .gitignore                  # Ignore file for Git version control
-├── package.json                # Project metadata and scripts
-├── package-lock.json           # Lock file for consistent installs
-├── README.md                   # Main documentation file
+```bash
+    Experiment12/
+    ├── .gitignore                  # Ignore file for Git version control
+    ├── package.json                # Project metadata and scripts
+    ├── package-lock.json           # Lock file for consistent installs
+    ├── README.md                   # Main documentation file
 
-├── public/                     # Public assets
-│   ├── favicon.ico
-│   ├── image.png               # Custom image asset
-│   ├── index.html              # HTML template
-│   ├── logo192.png
-│   ├── logo512.png
-│   ├── manifest.json           # Progressive Web App configuration
-│   └── robots.txt              # Bot crawling rules
+    ├── public/                     # Public assets
+    │   ├── favicon.ico
+    │   ├── image.png               # Custom image asset
+    │   ├── index.html              # HTML template
+    │   ├── logo192.png
+    │   ├── logo512.png
+    │   ├── manifest.json           # Progressive Web App configuration
+    │   └── robots.txt              # Bot crawling rules
 
-├── src/                        # React application source code
-│   ├── App.js                  # Main application component
-│   ├── App.css                 # Styles for App.js
-│   ├── App.test.js             # Test setup for App component
-│   ├── index.js                # Entry point for React
-│   ├── index.css               # Global styles
-│   ├── logo.svg                # Default React logo
-│   ├── reportWebVitals.js      # Performance reporting
-│   ├── setupTests.js           # Jest
+    ├── src/                        # React application source code
+    │   ├── App.js                  # Main application component
+    │   ├── App.css                 # Styles for App.js
+    │   ├── App.test.js             # Test setup for App component
+    │   ├── index.js                # Entry point for React
+    │   ├── index.css               # Global styles
+    │   ├── logo.svg                # Default React logo
+    │   ├── reportWebVitals.js      # Performance reporting
+    │   ├── setupTests.js           # Jest
+
+```
 
 ---
 
@@ -103,47 +108,42 @@ Experiment12/
 
 ### 📦 Steps to Run
 
-1. **Create React App**
-   ```bash
-   npx create-react-app weather-app
-   cd weather-app
-````
+### Create React App
 
-2. **Install Required Libraries**
+```bash
+npx create-react-app weather-app
+cd weather-app
+```
 
-   ```bash
-   npm install react-router-dom chart.js react-chartjs-2
-   ```
+### Install Required Libraries
 
-3. **Create Folder Structure**
+```bash
+npm install react-router-dom chart.js react-chartjs-2
+```
 
-   ```bash
-   mkdir src/components src/services
-   ```
+### Create Folder Structure
 
-4. **Set Up Weather API**
+```bash
+mkdir src/components src/services
+```
 
-   * In `src/services/weatherService.js`, implement OpenWeatherMap API logic.
+1. **Set Up Weather API**
 
-5. **Create Chart Component**
+   - In `src/services/weatherService.js`, implement OpenWeatherMap API logic.
 
-   * In `src/components/WeatherChart.js`, use `Line` chart from Chart.js to show historical temperature.
+2. **Create Chart Component**
 
-6. **Build UI and Routing**
+   - In `src/components/WeatherChart.js`, use `Line` chart from Chart.js to show historical temperature.
 
-   * Use `App.js` to set up navigation between Registration, Login, About, Contact, and Weather components using `<Routes>` and `<Route>`.
+3. **Build UI and Routing**
 
-7. **Run the App**
+   - Use `App.js` to set up navigation between Registration, Login, About, Contact, and Weather components using `<Routes>` and `<Route>`.
 
-   ```bash
-   npm start
-   ```
+4. **Run the App**
 
-8. **Open in Browser**
-
-   ```
-   http://localhost:3000
-   ```
+```bash
+npm start
+```
 
 ---
 
@@ -162,6 +162,6 @@ Experiment12/
 
 ## 🧪 Screenshots
 
-![Weather Chart Demo](./public/image.png)
+| ![Weather Chart Demo](./public/image.png) |
 
 ---

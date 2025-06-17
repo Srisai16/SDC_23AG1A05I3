@@ -1,7 +1,3 @@
-
----
-
-```markdown
 # Experiment06 - 📚 XML Validation with DTD and XSD Using Java
 
 ## 🎯 AIM
@@ -16,7 +12,7 @@ This experiment demonstrates the use of **Java-based XML validation** for a book
 
 - Parse an XML file validated with a DTD (`bookstore_dtd.xml`)
 - Validate the same XML file using an XSD (`bookstore.xsd`)
-  
+
 It showcases how Java can perform schema validations programmatically and outputs the validation status on the console.
 
 The program uses `DocumentBuilderFactory` for DTD validation and `SchemaFactory` for XSD validation.
@@ -25,17 +21,17 @@ The program uses `DocumentBuilderFactory` for DTD validation and `SchemaFactory`
 
 ## 🗂️ PROJECT STRUCTURE
 
+```bash
+
+  Experiment06/
+  ├── bookstore.dtd           # DTD schema for structural validation
+  ├── bookstore.xsd           # XSD schema for advanced data-type validation
+  ├── bookstore_dtd.xml       # XML to validate with DTD
+  ├── bookstor_xsd.xml        # XML to validate with XSD
+  ├── XMLValidator.java       # Java source file for validator
+  └── XMLValidator.class      # Compiled class file
+
 ```
-
-Experiment06/
-├── bookstore.dtd           # DTD schema for structural validation
-├── bookstore.xsd           # XSD schema for advanced data-type validation
-├── bookstore_dtd.xml       # XML to validate with DTD
-├── bookstor_xsd.xml        # XML to validate with XSD
-├── XMLValidator.java       # Java source file for validator
-└── XMLValidator.class      # Compiled class file
-
-````
 
 ---
 
@@ -51,29 +47,30 @@ Experiment06/
 
 ## 🧪 STEPS TO RUN THE PROJECT
 
-1. **Open a Terminal and Navigate to Project Folder:**
-   ```bash
-   cd path/to/Experiment06
-````
+**Open a Terminal and Navigate to Project Folder:**
 
-2. **Compile the Java Program:**
+  ```bash
+  cd path/to/Experiment06
+  ```
 
-   ```bash
-   javac XMLValidator.java
-   ```
+**Compile the Java Program:**
 
-3. **Run the Validator:**
+  ```bash
+  javac XMLValidator.java
+  ```
 
-   ```bash
-   java XMLValidator
-   ```
+**Run the Validator:**
 
-4. **Expected Output (if both validations succeed):**
+  ```bash
+  java XMLValidator
+  ```
 
-   ```
-   ✅ DTD Validation: Successful
-   ✅ XSD Validation: Successful
-   ```
+**Expected Output (if both validations succeed):**
+
+  ```bash
+  ✅ DTD Validation: Successful
+  ✅ XSD Validation: Successful
+  ```
 
 ---
 
@@ -81,7 +78,7 @@ Experiment06/
 
 > Replace the placeholder below with your actual console output screenshot.
 
-![Validation Output](output.png)
+| ![Validation Output](output.png) |
 
 ---
 
@@ -99,20 +96,20 @@ Experiment06/
 
 ## 💡 NOTES
 
-* For **DTD validation**, `bookstore_dtd.xml` must include:
+- For **DTD validation**, `bookstore_dtd.xml` must include:
 
   ```xml
   <!DOCTYPE bookstore SYSTEM "bookstore.dtd">
   ```
 
-* For **XSD validation**, `bookstore_xsd.xml` must include:
+- For **XSD validation**, `bookstore_xsd.xml` must include:
 
   ```xml
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="bookstore.xsd"
   ```
 
-* Ensure all files are in the same directory for local file access.
+Ensure all files are in the same directory for local file access.
 
 ---
 
@@ -120,6 +117,6 @@ Experiment06/
 
 Developed as part of XML & Web Technologies Lab coursework.
 
-**🔗 Repository:** [GitHub Link](#) (https://github.com/Srisai16/SDC_23AG1A05I3.git)
+**🔗 Repository:** [GitHub Link](https://github.com/Srisai16/SDC_23AG1A05I3.git)
 
 ---

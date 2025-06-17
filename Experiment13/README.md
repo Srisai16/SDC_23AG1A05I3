@@ -1,7 +1,3 @@
-
----
-
-```markdown
 # Experiment13 – ✅ React TODO Application
 
 ![React](https://img.shields.io/badge/React-v18%2B-blue)
@@ -25,6 +21,7 @@ This experiment demonstrates how to create a **single-page TODO application** us
 - ❌ Delete completed or unwanted tasks
 
 It covers essential concepts such as:
+
 - React functional components
 - State management using `useState`
 - Form handling
@@ -36,39 +33,42 @@ It covers essential concepts such as:
 
 ## 🧱 Project Structure
 
-Experiment13/
-├── .gitignore                  # Files and folders ignored by Git
-├── package.json                # Project metadata, dependencies, scripts
-├── package-lock.json           # Dependency lockfile for reproducibility
-├── README.md                   # Project documentation
+```bash
 
-├── public/                     # Static files and public assets
-│   ├── favicon.ico
-│   ├── image.png               # Optional banner or logo
-│   ├── index.html              # HTML entry point for React
-│   ├── logo192.png
-│   ├── logo512.png
-│   ├── manifest.json           # Web app manifest for PWA support
-│   └── robots.txt              # Web crawler rules
+    Experiment13/
+    ├── .gitignore                  # Files and folders ignored by Git
+    ├── package.json                # Project metadata, dependencies, scripts
+    ├── package-lock.json           # Dependency lockfile for reproducibility
+    ├── README.md                   # Project documentation
 
-├── src/                        # Application source code
-│   ├── App.js                  # Root component
-│   ├── App.css                 # App-specific styles
-│   ├── App.test.js             # App test file (Jest or Testing Library)
-│   ├── index.js                # React entry point (DOM render)
-│   ├── index.css               # Global styles
-│   ├── logo.svg                # React logo
-│   ├── reportWebVitals.js      # Performance measurement
-│   ├── setupTests.js           # Test environment setup
-│   ├── styles.css              # Custom global/component styling
+    ├── public/                     # Static files and public assets
+    │   ├── favicon.ico
+    │   ├── image.png               # Optional banner or logo
+    │   ├── index.html              # HTML entry point for React
+    │   ├── logo192.png
+    │   ├── logo512.png
+    │   ├── manifest.json           # Web app manifest for PWA support
+    │   └── robots.txt              # Web crawler rules
 
-│   ├── components/             # Reusable functional components
-│   │   ├── TodoForm.js         # Input form for creating tasks
-│   │   ├── TodoItem.js         # Individual to-do task item
-│   │   └── TodoList.js         # Component that lists all to-dos
+    ├── src/                        # Application source code
+    │   ├── App.js                  # Root component
+    │   ├── App.css                 # App-specific styles
+    │   ├── App.test.js             # App test file (Jest or Testing Library)
+    │   ├── index.js                # React entry point (DOM render)
+    │   ├── index.css               # Global styles
+    │   ├── logo.svg                # React logo
+    │   ├── reportWebVitals.js      # Performance measurement
+    │   ├── setupTests.js           # Test environment setup
+    │   ├── styles.css              # Custom global/component styling
 
-│   └── TodoItem.js             # (🔁 Duplicate — consider removing or refactoring)
+    │   ├── components/             # Reusable functional components
+    │   │   ├── TodoForm.js         # Input form for creating tasks
+    │   │   ├── TodoItem.js         # Individual to-do task item
+    │   │   └── TodoList.js         # Component that lists all to-dos
 
+    │   └── TodoItem.js             # (🔁 Duplicate — consider removing or refactoring)
+
+```
 
 ---
 
@@ -82,41 +82,40 @@ Experiment13/
 
 ### 📦 Steps to Run the Project
 
-1. **Create the React App**
-   ```bash
-   npx create-react-app todo-app
-   cd todo-app
-````
+- **Create the React App**
 
-2. **Create Components**
+```bash
+npx create-react-app todo-app
+cd todo-app
+```
+
+- **Create Components**
    Inside `src/components/`, create:
 
-   * `TodoForm.js`
-   * `TodoItem.js`
-   * `TodoList.js`
+   -- `TodoForm.js`
+   -- `TodoItem.js`
+   -- `TodoList.js`
 
-3. **Implement Logic in App.js**
+- **Implement Logic in App.js**
 
-   * Use `useState()` to manage the task list.
-   * Implement functions for adding, toggling completion, and deleting tasks.
-   * Pass these functions as props to child components.
+   -- Use `useState()` to manage the task list.
+   -- Implement functions for adding, toggling completion, and deleting tasks.
+   -- Pass these functions as props to child components.
 
-4. **Style the Application**
+- **Style the Application**
 
-   * Customize layout and colors using `App.css` and `styles.css`.
-   * Ensure a minimal and visually appealing Canva-style UI.
+   -- Customize layout and colors using `App.css` and `styles.css`.
+   -- Ensure a minimal and visually appealing Canva-style UI.
 
-5. **Run the Application**
+- **Run the Application**
 
-   ```bash
-   npm start
-   ```
+```bash
+npm start
+```
 
-6. **View in Browser**
+- **View in Browser**
 
-   ```
-   http://localhost:3000
-   ```
+   `http://localhost:3000`
 
 ---
 
@@ -124,24 +123,25 @@ Experiment13/
 
 To deploy this project to GitHub:
 
-1. Create a GitHub repository (e.g., `todo-app-react`).
-2. Initialize Git and push the code:
+- Create a GitHub repository (e.g., `todo-app-react`).
+- Initialize Git and push the code:
 
-   ```bash
-   git init
-   git remote add origin https://github.com/your-username/todo-app-react.git
-   git branch -M main
-   git add .
-   git commit -m "Initial commit"
-   git push -u origin main
-   ```
-3. Enable GitHub Pages (if needed) via `gh-pages` or similar deployment.
+```bash
+git init
+git remote add origin https://github.com/your-username/todo-app-react.git
+git branch -M main
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+```
+
+- Enable GitHub Pages (if needed) via `gh-pages` or similar deployment.
 
 ---
 
 ## 🖼️ Screenshot
 
-![TODO App UI](./public/image.png)
+| ![TODO App UI](./public/image.png) |
 
 ---
 

@@ -1,7 +1,3 @@
-
----
-
-```markdown
 # Experiment14 – 🎓 Django Student Management System
 
 ![Django](https://img.shields.io/badge/Django-5.2-green.svg)
@@ -32,41 +28,41 @@ The project is intended for beginners to get hands-on with Django's project and 
 
 ## 🧱 Project Structure
 
+```bash
+
+    Experiment14/
+    │
+    ├── core/
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── migrations/
+    │   │   └── init.py
+    │   ├── models.py
+    │   ├── tests.py
+    │   ├── views.py              # All view functions
+    │   ├── urls.py               # App-level URLs
+    │   ├── templates/            # HTML templates
+    │   │   ├── base.html         # Base layout
+    │   │   ├── home.html         # Homepage
+    │   │   ├── about.html        # About page
+    │   │   ├── contact.html      # Contact page
+    │   │   ├── login.html        # Login page
+    │   │   └── register.html     # Registration page
+    │
+    ├── student\_mgmt/
+    │   ├── settings.py           # Project settings
+    │   ├── urls.py               # Root URL dispatcher
+    │   ├── asgi.py
+    │   └── wsgi.py
+    │
+    ├── static/
+    │   └── style.css             # Global CSS styles
+    │
+    ├── db.sqlite3                # SQLite database
+    ├── manage.py                 # Django project CLI tool
+    └── README.md                 # Project documentation
+
 ```
-
-Experiment14/
-│
-├── core/
-│   ├── admin.py
-│   ├── apps.py
-│   ├── migrations/
-│   │   └── init.py
-│   ├── models.py
-│   ├── tests.py
-│   ├── views.py              # All view functions
-│   ├── urls.py               # App-level URLs
-│   ├── templates/            # HTML templates
-│   │   ├── base.html         # Base layout
-│   │   ├── home.html         # Homepage
-│   │   ├── about.html        # About page
-│   │   ├── contact.html      # Contact page
-│   │   ├── login.html        # Login page
-│   │   └── register.html     # Registration page
-│
-├── student\_mgmt/
-│   ├── settings.py           # Project settings
-│   ├── urls.py               # Root URL dispatcher
-│   ├── asgi.py
-│   └── wsgi.py
-│
-├── static/
-│   └── style.css             # Global CSS styles
-│
-├── db.sqlite3                # SQLite database
-├── manage.py                 # Django project CLI tool
-└── README.md                 # Project documentation
-
-````
 
 ---
 
@@ -81,59 +77,58 @@ Experiment14/
 
 ### 🛠 Steps to Run the Project
 
-1. **Clone the Repository**
-   ```bash
-   git clone <repository-url>
-   cd student_mgmt
-````
+- **Clone the Repository**
 
-2. **Create & Activate a Virtual Environment**
+```bash
+git clone <repository-url>
+cd student_mgmt
+```
+
+- **Create & Activate a Virtual Environment**
    (Recommended to isolate project dependencies)
 
-   * On Windows:
+   -- On Windows:
 
-     ```bash
-     python -m venv venv
-     venv\Scripts\activate
-     ```
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
 
-   * On Linux/macOS:
+   -- On Linux/macOS:
 
-     ```bash
-     python3 -m venv venv
-     source venv/bin/activate
-     ```
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
 
-3. **Install Django**
+- **Install Django**
 
-   ```bash
-   pip install django==5.2
-   ```
+```bash
+pip install django==5.2
+```
 
-4. **Apply Migrations**
+- **Apply Migrations**
 
-   ```bash
-   python manage.py migrate
-   ```
+```bash
+python manage.py migrate
+```
 
-5. **Create Superuser (Optional for Admin Panel)**
+- **Create Superuser (Optional for Admin Panel)**
 
-   ```bash
-   python manage.py createsuperuser
-   ```
+```bash
+python manage.py createsuperuser
+```
 
-6. **Run Development Server**
+- **Run Development Server**
 
-   ```bash
-   python manage.py runserver
-   ```
+```bash
+python manage.py runserver
+```
 
-7. **Open in Browser**
+- **Open in Browser**
    Visit the local server:
 
-   ```
-   http://127.0.0.1:8000/
-   ```
+   `http://127.0.0.1:8000/`
 
 ---
 
@@ -148,7 +143,6 @@ Experiment14/
 | Register | `/register/` | User registration form      |
 
 ---
-
 
 ## 👨‍💻 Author
 

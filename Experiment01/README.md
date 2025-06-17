@@ -1,7 +1,3 @@
-
----
-
-````markdown
 # Experiment01 -🛍️ FBS EBookstore
 
 This project is **Experiment 01** from the [SDC_23AG1A05I3](https://github.com/Srisai16/SDC_23AG1A05I3) repository, which implements a **responsive web application** for a bookstore. It includes a registration/login flow, a product catalog, and a working shopping cart, built using **CSS3 features**, **Flexbox**, and **CSS Grid**.
@@ -10,15 +6,18 @@ This project is **Experiment 01** from the [SDC_23AG1A05I3](https://github.com
 
 ## Table of Contents
 
-1. [Overview](#overview)  
-2. [Demo](#demo)  
-3. [Features](#features)  
-4. [Tech Stack & CSS Approach](#tech-stack--css-approach)  
-5. [Setup Instructions](#setup-instructions)  
-6. [Project Structure](#project-structure)  
-7. [How It Works](#how-it-works)  
-8. [Screenshots](#screenshots)  
-9. [Contribution](#contribution)
+- [Experiment01 -🛍️ FBS EBookstore](#experiment01--️-fbs-ebookstore)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Demo](#demo)
+  - [Features](#features)
+  - [Tech Stack \& CSS Approach](#tech-stack--css-approach)
+  - [Setup Instructions](#setup-instructions)
+  - [Project Structure](#project-structure)
+  - [How It Works](#how-it-works)
+  - [Screenshots](#screenshots)
+  - [Contribution](#contribution)
+  - [Contact](#contact)
 
 ---
 
@@ -26,10 +25,10 @@ This project is **Experiment 01** from the [SDC_23AG1A05I3](https://github.com
 
 A lightweight **client-side bookstore** web app that allows users to:
 
-- **Register** a new account  
-- **Login / Logout**  
-- View a **catalog** of books  
-- Add books to a **shopping cart**, view, update quantities, and checkout  
+- **Register** a new account
+- **Login / Logout**
+- View a **catalog** of books
+- Add books to a **shopping cart**, view, update quantities, and checkout
 
 All data is stored in memory using browser local storage; no backend is required.
 
@@ -71,18 +70,18 @@ Launch the project locally to explore the full feature set.
 
    ```bash
    git clone https://github.com/Srisai16/SDC_23AG1A05I3.git
-````
+   ````
 
-2. **Navigate to Experiment1 folder**:
+2. **Navigate to Experiment01 folder**:
 
    ```bash
-   cd SDC_23AG1A05I3/Experiment1
+   cd SDC_23AG1A05I3/Experiment01
    ```
 
 3. **Open `index.html`** in your browser:
 
-   * Double‑click the file, or
-   * Use a simple server (optional but recommended):
+   - Double‑click the file, or
+   - Use a simple server (optional but recommended):
 
      ```bash
      # Python 3 built-in server
@@ -95,20 +94,22 @@ Launch the project locally to explore the full feature set.
 
 ## Project Structure
 
-Experiment01/
-│
-├── assets/
-│   └── images/
-│       ├── cart.png          # Screenshot of shopping cart UI
-│       ├── catalog.png       # Screenshot of catalog/product listing
-│       └── login.png         # Screenshot of login/register UI
-│
-├── index.html                # Homepage (book catalog with navigation)
-├── login.html                # Login form
-├── registration.html         # New user registration form
-├── cart.html                 # Cart page with cart summary and items
-├── style.css                 # Main stylesheet (Flexbox, Grid, animations)
-└── README.md                 # Project documentation (this file)
+```bash
+   Experiment01/
+   │
+   ├── assets/
+   │   └── images/
+   │       ├── cart.png          # Screenshot of shopping cart UI
+   │       ├── catalog.png       # Screenshot of catalog/product listing
+   │       └── login.png         # Screenshot of login/register UI
+   │
+   ├── index.html                # Homepage (book catalog with navigation)
+   ├── login.html                # Login form
+   ├── registration.html         # New user registration form
+   ├── cart.html                 # Cart page with cart summary and items
+   ├── style.css                 # Main stylesheet (Flexbox, Grid, animations)
+   └── README.md                 # Project documentation (this file)
+```
 
 ---
 
@@ -116,19 +117,19 @@ Experiment01/
 
 1. **Registration → Login**
 
-   * Users submit a form and credentials are saved in `localStorage`.
-   * On login, session state is stored and user is redirected to `index.html`.
+   - Users submit a form and credentials are saved in `localStorage`.
+   - On login, session state is stored and user is redirected to `index.html`.
 
 2. **Cart Page**
 
-   * `cart.html` diplays cart data, item list using Flex/Grid.
-   * Displays subtotal and total dynamically.
+   - `cart.html` diplays cart data, item list using Flex/Grid.
+   - Displays subtotal and total dynamically.
 
 3. **Responsiveness & Design**
 
-   * Nav header uses **Flexbox** for horizontal layout and mobile toggle.
-   * Product grid uses **CSS Grid** to adjust columns based on screen width.
-   * Cart rows use Flexbox for alignment and spacing.
+   - Nav header uses **Flexbox** for horizontal layout and mobile toggle.
+   - Product grid uses **CSS Grid** to adjust columns based on screen width.
+   - Cart rows use Flexbox for alignment and spacing.
 
 ---
 
@@ -146,9 +147,9 @@ Experiment01/
 
 This experiment is part of academic coursework. Feel free to:
 
-* Add more UI polish
-* Integrate a backend (e.g., Node.js + Express + MongoDB)
-* Enhance accessibility & form validation
+- Add more UI polish
+- Integrate a backend (e.g., Node.js + Express + MongoDB)
+- Enhance accessibility & form validation
 
 ---
 
@@ -157,7 +158,4 @@ This experiment is part of academic coursework. Feel free to:
 Maintainer: **Srisai16**
 Repo: [https://github.com/Srisai16/SDC\_23AG1A05I3](https://github.com/Srisai16/SDC_23AG1A05I3)
 
-```
-
 ---
-

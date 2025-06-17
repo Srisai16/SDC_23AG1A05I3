@@ -1,7 +1,3 @@
-
----
-
-```markdown
 # Experiment16 – ✅ Django TODO App
 
 ![Django](https://img.shields.io/badge/Django-5.2-green.svg)
@@ -38,35 +34,35 @@ Ideal for **beginners** looking to gain practical experience in Django backend d
 
 ## 🧱 Project Structure
 
+```bash
+
+    Experiment16/
+    │
+    ├── manage.py                  # Django CLI entry point
+    ├── db.sqlite3                 # SQLite database file
+    │
+    ├── todo\_project/              # Django project configuration
+    │   ├── **init**.py
+    │   ├── settings.py            # Global settings
+    │   ├── urls.py                # Root URL dispatcher
+    │   ├── wsgi.py
+    │   └── asgi.py
+    │
+    ├── todo/                      # Main Django app
+    │   ├── admin.py               # Admin config
+    │   ├── apps.py
+    │   ├── models.py              # Task model
+    │   ├── forms.py               # Task form (optional)
+    │   ├── views.py               # View functions
+    │   ├── urls.py                # App-level URL routing
+    │   ├── templates/
+    │   │   └── todo/
+    │   │       └── index.html     # HTML template for task UI
+    │   └── migrations/            # Django migrations
+    │
+    └── README.md                  # Project documentation
+
 ```
-
-django\_todo\_app/
-│
-├── manage.py                  # Django CLI entry point
-├── db.sqlite3                 # SQLite database file
-│
-├── todo\_project/              # Django project configuration
-│   ├── **init**.py
-│   ├── settings.py            # Global settings
-│   ├── urls.py                # Root URL dispatcher
-│   ├── wsgi.py
-│   └── asgi.py
-│
-├── todo/                      # Main Django app
-│   ├── admin.py               # Admin config
-│   ├── apps.py
-│   ├── models.py              # Task model
-│   ├── forms.py               # Task form (optional)
-│   ├── views.py               # View functions
-│   ├── urls.py                # App-level URL routing
-│   ├── templates/
-│   │   └── todo/
-│   │       └── index.html     # HTML template for task UI
-│   └── migrations/            # Django migrations
-│
-└── README.md                  # Project documentation
-
-````
 
 ---
 
@@ -83,17 +79,17 @@ django\_todo\_app/
 
 ## 🚀 Steps to Run the Project
 
-### 1. Create the Django Project and App
+- Create the Django Project and App
 
 ```bash
 django-admin startproject todo_project
 cd todo_project
 python manage.py startapp todo
-````
+```
 
 ---
 
-### 2. Define the Model in `todo/models.py`
+- Define the Model in `todo/models.py`
 
 ```python
 from django.db import models
@@ -108,7 +104,7 @@ class Task(models.Model):
 
 ---
 
-### 3. Create and Apply Migrations
+- Create and Apply Migrations
 
 ```bash
 python manage.py makemigrations
@@ -117,15 +113,15 @@ python manage.py migrate
 
 ---
 
-### 4. Set Up Views, Templates, and URLs
+- Set Up Views, Templates, and URLs
 
-* In `views.py`, write logic to fetch and render tasks.
-* Create `templates/todo/index.html` for the task interface.
-* Add URL routes in `todo/urls.py` and include them in `todo_project/urls.py`.
+    -- In `views.py`, write logic to fetch and render tasks.
+    -- Create `templates/todo/index.html` for the task interface.
+    -- Add URL routes in `todo/urls.py` and include them in `todo_project/urls.py`.
 
 ---
 
-### 5. Run the Development Server
+- Run the Development Server
 
 ```bash
 python manage.py runserver
@@ -133,20 +129,18 @@ python manage.py runserver
 
 ---
 
-### 6. Open the App in Browser
+- Open the App in Browser
 
-```
-http://127.0.0.1:8000/
-```
+`http://127.0.0.1:8000/`
 
 ---
 
 ## 🧩 Features
 
-* Simple and clean task UI
-* Add and list TODO tasks
-* Easily extendable to add "delete" and "mark complete" features
-* Based on Django MVT architecture
+- Simple and clean task UI
+- Add and list TODO tasks
+- Easily extendable to add "delete" and "mark complete" features
+- Based on Django MVT architecture
 
 ---
 

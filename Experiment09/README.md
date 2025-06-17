@@ -1,7 +1,3 @@
-
----
-
-````markdown
 # Experiment09 -📦 Node.js Core Modules Exploration
 
 ![Node.js Logo](https://nodejs.org/static/images/logo.svg)
@@ -40,27 +36,32 @@ A comprehensive demonstration of **Node.js core modules** including `HTTP`, `OS`
 ### 🔍 Steps
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/Srisai16/SDC_23AG1A05I3.git
-   cd SDC_23AG1A05I3/Experiment09
-````
 
-2. No additional dependencies are required — all modules are core to Node.js.
+```bash
+git clone https://github.com/Srisai16/SDC_23AG1A05I3.git
+cd SDC_23AG1A05I3/Experiment09
+```
+
+1. No additional dependencies are required — all modules are core to Node.js.
 
 ---
 
 ## Project Structure
 
-Experiment09/
-├── events.js               # Demonstrates Node.js 'events' module usage
-├── os.js                   # Script using Node.js 'os' module
-├── path.js                 # Script using Node.js 'path' module
-├── server.js               # Basic HTTP server setup
-├── localhost-3000.png      # Screenshot of running server on localhost
-├── os.png                  # Output screenshot of os module execution
-├── package.json            # Project configuration and dependencies
-├── package-lock.json       # Dependency lock file
-└── README.md               # Project documentation
+```bash
+
+    Experiment09/
+    ├── events.js               # Demonstrates Node.js 'events' module usage
+    ├── os.js                   # Script using Node.js 'os' module
+    ├── path.js                 # Script using Node.js 'path' module
+    ├── server.js               # Basic HTTP server setup
+    ├── localhost-3000.png      # Screenshot of running server on localhost
+    ├── os.png                  # Output screenshot of os module execution
+    ├── package.json            # Project configuration and dependencies
+    ├── package-lock.json       # Dependency lock file
+    └── README.md               # Project documentation
+
+```
 
 ## 🚀 Running the Examples
 
@@ -74,11 +75,11 @@ node server.js
 
 🖼️ Sample Output:
 
-```
-Server running at http://localhost:3000/
-Press Ctrl+C to stop the server
-[2023-06-20T10:30:45.123Z] GET /
-[2023-06-20T10:31:10.456Z] GET /favicon.ico
+```bash
+    Server running at http://localhost:3000/
+    Press Ctrl+C to stop the server
+    [2023-06-20T10:30:45.123Z] GET /
+    [2023-06-20T10:31:10.456Z] GET /favicon.ico
 ```
 
 ---
@@ -97,9 +98,9 @@ node os.js
 
 🖼️ Sample Output:
 
-![OS Module Screenshot](./os.png)
+| ![OS Module Screenshot](./os.png) |
 
-```
+```bash
 === System Information ===
 OS Type: Linux
 Platform: linux x64
@@ -135,9 +136,9 @@ node path.js
 
 ## 📚 Learning Resources
 
-* [Node.js Official Documentation](https://nodejs.org/en/docs/)
-* [Path Module Guide](https://nodejs.org/api/path.html)
-* [Understanding the Event Loop](https://nodejs.dev/learn/the-nodejs-event-loop)
+- [Node.js Official Documentation](https://nodejs.org/en/docs/)
+- [Path Module Guide](https://nodejs.org/api/path.html)
+- [Understanding the Event Loop](https://nodejs.dev/learn/the-nodejs-event-loop)
 
 ---
 
@@ -145,10 +146,10 @@ node path.js
 
 This project demonstrates:
 
-* ✅ Fully functional HTTP server
-* ✅ Real-time system diagnostics
-* ✅ File system and path handling
-* ✅ Event-driven development in Node.js
-* ✅ Best practices: error handling, formatting, and modularity
+- ✅ Fully functional HTTP server
+- ✅ Real-time system diagnostics
+- ✅ File system and path handling
+- ✅ Event-driven development in Node.js
+- ✅ Best practices: error handling, formatting, and modularity
 
 ---

@@ -1,7 +1,3 @@
-
----
-
-```markdown
 # Experiment15 – 🌤️ Django Weather App
 
 ![Django](https://img.shields.io/badge/Django-5.2-green.svg)
@@ -31,35 +27,35 @@ The application covers:
 
 ## 🧱 Project Structure
 
+```bash
+
+    Experiment15/
+    │
+    ├── db.sqlite3                 # SQLite database file
+    ├── manage.py                  # Django CLI management script
+    │
+    ├── weather/                   # Main application
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── migrations/
+    │   │   └── init.py
+    │   ├── models.py              # (Unused if data is not stored)
+    │   ├── views.py               # Logic to fetch and send weather data
+    │   ├── urls.py                # App-level routing
+    │   ├── templates/
+    │   │   └── weather/
+    │   │       └── index.html     # Main weather dashboard with Chart.js
+    │   └── tests.py
+    │
+    ├── weatherproject/            # Project-level settings
+    │   ├── settings.py
+    │   ├── urls.py
+    │   ├── asgi.py
+    │   └── wsgi.py
+    │
+    └── README.md                  # Project documentation
+
 ```
-
-weatherproject/
-│
-├── db.sqlite3                 # SQLite database file
-├── manage.py                  # Django CLI management script
-│
-├── weather/                   # Main application
-│   ├── admin.py
-│   ├── apps.py
-│   ├── migrations/
-│   │   └── init.py
-│   ├── models.py              # (Unused if data is not stored)
-│   ├── views.py               # Logic to fetch and send weather data
-│   ├── urls.py                # App-level routing
-│   ├── templates/
-│   │   └── weather/
-│   │       └── index.html     # Main weather dashboard with Chart.js
-│   └── tests.py
-│
-├── weatherproject/            # Project-level settings
-│   ├── settings.py
-│   ├── urls.py
-│   ├── asgi.py
-│   └── wsgi.py
-│
-└── README.md                  # Project documentation
-
-````
 
 ---
 
@@ -76,51 +72,49 @@ weatherproject/
 
 ## 🚀 Steps to Run the Project
 
-1. **Create the Django Project and App**
+- **Create the Django Project and App**
 
-   ```bash
-   django-admin startproject weatherproject
-   cd weatherproject
-   python manage.py startapp weather
-````
+```bash
+django-admin startproject weatherproject
+cd weatherproject
+python manage.py startapp weather
+```
 
-2. **Configure URLs and Views**
+- **Configure URLs and Views**
 
-   * In `weather/urls.py`, define routes for displaying weather.
-   * In `weather/views.py`, create logic to fetch weather data and return it to the template context.
+   -- In `weather/urls.py`, define routes for displaying weather.
+   -- In `weather/views.py`, create logic to fetch weather data and return it to the template context.
 
-3. **Create HTML Template**
+- **Create HTML Template**
 
-   * Save `index.html` in `weather/templates/weather/`
-   * Embed Django template tags to inject weather data.
-   * Integrate Chart.js using the official CDN:
+   -- Save `index.html` in `weather/templates/weather/`
+   -- Embed Django template tags to inject weather data.
+   -- Integrate Chart.js using the official CDN:
 
-     ```html
-     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-     ```
+```html
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+```
 
-4. **Run the Development Server**
+- **Run the Development Server**
 
-   ```bash
-   python manage.py runserver
-   ```
+```bash
+python manage.py runserver
+```
 
-5. **View the App**
+- **View the App**
 
    Open your browser and navigate to:
 
-   ```
-   http://127.0.0.1:8000/
-   ```
+   `http://127.0.0.1:8000/`
 
 ---
 
 ## 🌦️ Features
 
-* Current weather display with icon and description
-* 5-day temperature trend visualized in a Chart.js line chart
-* Responsive frontend UI using HTML + JavaScript
-* Server-rendered content with Django template tags
+- Current weather display with icon and description
+- 5-day temperature trend visualized in a Chart.js line chart
+- Responsive frontend UI using HTML + JavaScript
+- Server-rendered content with Django template tags
 
 ---
 

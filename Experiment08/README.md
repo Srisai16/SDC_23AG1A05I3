@@ -23,15 +23,16 @@ This Flask application demonstrates two session tracking mechanisms (Cookies and
 
 ## File Structure
 
-```
-transaction_tracker/
-├── app.py                    # Main Flask application
-├── templates/
-│   ├── index.html            # Homepage with language options
-│   ├── cookie_history.html   # Displays cookie-based transaction history
-│   ├── session_history.html  # Displays session-based transaction history
-│   └── set_language.html     # Confirmation page after language change
-└── README.md                 # This documentation file
+```bash
+  Experiment08/
+  ├── app.py                    # Main Flask application
+  ├── templates/
+  │   ├── index.html            # Homepage with language options
+  │   ├── cookie_history.html   # Displays cookie-based transaction history
+  │   ├── session_history.html  # Displays session-based transaction history
+  │   └── set_language.html     # Confirmation page after language change
+  └── README.md                 # This documentation file
+
 ```
 
 ## Installation
@@ -71,16 +72,20 @@ Then open your browser and navigate to `http://localhost:5000`
 ## Sample Output
 
 ### Homepage (Initial Visit)
-![Initial Homepage](Experiment08\Transaction-Tracker.png)
+
+| ![Initial Homepage](Experiment08\Transaction-Tracker.png) |
 
 ### After Setting Language to Spanish
-![Language Set](Experiment08\spanish.png)
+
+| ![Language Set](Experiment08\spanish.png)|
 
 ### Cookie Transaction History
-![Cookie History](Experiment08\Cookie-Transaction-History.png)
+
+| ![Cookie History](Experiment08\Cookie-Transaction-History.png) |
 
 ### Session Transaction History
-![Session History](Experiment08\Session-Transaction-History.png)
+
+| ![Session History](Experiment08\Session-Transaction-History.png) |
 
 ## Key Differences Demonstrated
 
@@ -102,9 +107,10 @@ Then open your browser and navigate to `http://localhost:5000`
 ## Clearing History
 
 Use the "Clear All History" link to:
+
 1. Remove the transaction history cookie
 2. Clear the session transaction history
 
-**🔗 Repository:** [GitHub Link](#) (https://github.com/Srisai16/SDC_23AG1A05I3.git)
+**🔗 Repository:** [GitHub Link](https://github.com/Srisai16/SDC_23AG1A05I3.git)
 
 ---

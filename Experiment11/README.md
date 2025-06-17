@@ -1,30 +1,32 @@
-
-```markdown
 # Experiment11 - 📘 Student Management System with React
 
 ![React](https://img.shields.io/badge/React-18.2-blue)
 ![React Router](https://img.shields.io/badge/React_Router-6.8-lightgrey)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 A modern single-page application for student management built with React and React Router, featuring navigation between registration, login, contact, and about pages.
 
 ## Table of Contents
-- [Features](#features)
-- [Demo](#demo)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Installation Guide](#installation-guide)
-- [Development Setup](#development-setup)
-- [Component Documentation](#component-documentation)
-- [Routing Configuration](#routing-configuration)
-- [Styling Approach](#styling-approach)
-- [Available Scripts](#available-scripts)
-- [Deployment](#deployment)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
+
+- [Experiment11 - 📘 Student Management System with React](#experiment11----student-management-system-with-react)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Demo](#demo)
+  - [Technologies Used](#technologies-used)
+  - [Project Structure](#project-structure)
+  - [Installation Guide](#installation-guide)
+    - [Prerequisites](#prerequisites)
+    - [Quick Start](#quick-start)
+  - [Development Setup](#development-setup)
+    - [Creating Components](#creating-components)
+    - [Routing Configuration](#routing-configuration)
+  - [Styling Approach](#styling-approach)
+  - [Available Scripts](#available-scripts)
+  - [Deployment](#deployment)
+  - [Testing](#testing)
+  - [Contributing](#contributing)
 
 ## Features
+
 - 🚀 Single-page application with client-side routing
 - 🔄 Seamless navigation between views
 - 🧩 Modular component architecture
@@ -35,9 +37,10 @@ A modern single-page application for student management built with React and Rea
 
 ## Demo
 
-![Screenshot](public/React-App.png)
+| ![Screenshot](public/React-App.png) |
 
 ## Technologies Used
+
 - **Frontend Framework**: React 18
 - **Routing**: React Router v6
 - **Styling**: CSS Modules
@@ -46,73 +49,83 @@ A modern single-page application for student management built with React and Rea
 
 ## Project Structure
 
-Experiment11/
-├── .gitignore                  # Specifies intentionally untracked files to ignore
-├── package.json                # Project metadata and dependencies
-├── package-lock.json           # Dependency lock file for consistent installs
-├── React-App.png               # Screenshot or UI reference image
-├── README.md                   # Project documentation
+```bash
+  Experiment11/
+  ├── .gitignore                  # Specifies intentionally untracked files to ignore
+  ├── package.json                # Project metadata and dependencies
+  ├── package-lock.json           # Dependency lock file for consistent installs
+  ├── React-App.png               # Screenshot or UI reference image
+  ├── README.md                   # Project documentation
 
-├── public/                     # Static assets served directly
-│   ├── favicon.ico
-│   ├── index.html              # HTML template for the app
-│   ├── logo192.png
-│   ├── logo512.png
-│   ├── manifest.json           # PWA manifest
-│   └── robots.txt              # SEO and crawling directives
+  ├── public/                     # Static assets served directly
+  │   ├── favicon.ico
+  │   ├── index.html              # HTML template for the app
+  │   ├── logo192.png
+  │   ├── logo512.png
+  │   ├── manifest.json           # PWA manifest
+  │   └── robots.txt              # SEO and crawling directives
 
-├── src/                        # Source code folder
-│   ├── App.js                  # Root component
-│   ├── App.css                 # Styles for App.js
-│   ├── App.test.js             # Default test file
-│   ├── index.js                # Entry point for React DOM rendering
-│   ├── index.css               # Global styles
-│   ├── logo.svg                # React logo
-│   ├── reportWebVitals.js      # Performance monitoring
-│   ├── setupTests.js           # Configuration for testing
+  ├── src/                        # Source code folder
+  │   ├── App.js                  # Root component
+  │   ├── App.css                 # Styles for App.js
+  │   ├── App.test.js             # Default test file
+  │   ├── index.js                # Entry point for React DOM rendering
+  │   ├── index.css               # Global styles
+  │   ├── logo.svg                # React logo
+  │   ├── reportWebVitals.js      # Performance monitoring
+  │   ├── setupTests.js           # Configuration for testing
 
-│   └── pages/                  # Page-level components
-│       ├── About.js            # About page
-│       ├── Contact.js          # Contact page
-│       ├── Login.js            # Login form component
-│       └── Register.js         # User registration component
+  │   └── pages/                  # Page-level components
+  │       ├── About.js            # About page
+  │       ├── Contact.js          # Contact page
+  │       ├── Login.js            # Login form component
+  │       └── Register.js         # User registration component
 
+```
+
+---
 
 ## Installation Guide
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm (v8 or higher) or yarn
 - Git (for version control)
 
 ### Quick Start
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Srisai16/SDC_23AG1A05I3.git
-   cd SDC_23AG1A05I3
-   ```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+Clone the repository:
 
-3. Start the development server:
-   ```bash
-   npm start
-   ```
+```bash
+git clone https://github.com/Srisai16/SDC_23AG1A05I3.git
+cd SDC_23AG1A05I3
+```
 
-4. Open your browser and visit:
-   ```
-   http://localhost:3000
-   ```
+Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Start the development server:
+
+```bash
+npm start
+```
+
+Open your browser and visit:
+
+`http://localhost:3000`
 
 ## Development Setup
 
 ### Creating Components
+
 Each component follows this structure:
+
 ```javascript
 // src/components/ComponentName/ComponentName.js
 import React from 'react';
@@ -130,7 +143,9 @@ export default ComponentName;
 ```
 
 ### Routing Configuration
+
 The main routing is set up in `App.js`:
+
 ```javascript
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -150,37 +165,47 @@ function App() {
 ```
 
 ## Styling Approach
+
 - **CSS Modules** for component-scoped styles
 - **Global styles** in `index.css`
 - **Responsive design** using media queries
 - **CSS Variables** for theming
 
 ## Available Scripts
+
 - `npm start`: Runs the app in development mode
 - `npm test`: Launches the test runner
 - `npm run build`: Builds the app for production
 - `npm run eject`: Ejects from Create React App
 
 ## Deployment
+
 Deploy to Vercel, Netlify, or GitHub Pages:
+
 ```bash
 npm run build
 ```
+
 Then upload the `build` folder to your hosting provider.
 
 ## Testing
-To test the application:
-1. Run the test suite:
-   ```bash
-   npm test
-   ```
 
-2. Manual testing:
-   - Verify all routes work correctly
-   - Test responsive behavior
-   - Check form validations
+To test the application:
+
+Run the test suite:
+
+```bash
+npm test
+```
+
+Manual testing:
+
+- Verify all routes work correctly
+- Test responsive behavior
+- Check form validations
 
 ## Contributing
+
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
