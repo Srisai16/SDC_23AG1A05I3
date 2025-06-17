@@ -128,10 +128,10 @@ Each experiment was designed to reinforce practical skills and simulate real-wor
 
 | Screenshot | Description |
 |------------|-------------|
-| ![Screenshot1](Experiment02\Home-FBS-eBooks-Store.png) | FBS Ebookstore Homepage |
-| ![Screenshot2](Experiment04\Weather-app-main\Weather-app.png) | React-based Weather Forecast UI |
-| ![Screenshot3](Experiment05\CRUDAPP.png) | CRUD App |
-| ![Screenshot4](Experiment09\os.png) | Node.js Core Modules |
+| ![Screenshot1](https://github.com/Srisai16/SDC_23AG1A05I3/blob/ab778f34332f64fd09807b8875e4f4f5923e66a1/Experiment02/Home-FBS-eBooks-Store.png) | FBS Ebookstore Homepage |
+| ![Screenshot2](https://github.com/Srisai16/SDC_23AG1A05I3/blob/ab778f34332f64fd09807b8875e4f4f5923e66a1/Experiment04/Weather-app-main/Weather-app.png) | React-based Weather Forecast UI |
+| ![Screenshot3](https://github.com/Srisai16/SDC_23AG1A05I3/blob/ab778f34332f64fd09807b8875e4f4f5923e66a1/Experiment05/CRUDAPP.png) | CRUD App |
+| ![Screenshot4](https://github.com/Srisai16/SDC_23AG1A05I3/blob/ab778f34332f64fd09807b8875e4f4f5923e66a1/Experiment09/os.png) | Node.js Core Modules |
 
 ---
 
